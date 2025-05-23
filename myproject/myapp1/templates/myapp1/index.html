@@ -1,81 +1,13 @@
-<!DOCTYPE html>
+
+ {% load static %}
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Asad Nadeem | Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-    .skills, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #2c3e50;
-      color: white;
-      margin-top: 2rem;
-    }
-    #contactForm input, #contactForm textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    #contactForm button {
-      background: #2980b9;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    #contactForm button:hover {
-      background: #3498db;
-    }
-  </style>
+<link rel="stylesheet" href="{% static 'my_app1/styles.css' %}">
+
 </head>
 <body>
   <header>
