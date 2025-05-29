@@ -7,12 +7,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Asad Nadeem | Portfolio</title>
 <link rel="stylesheet" href="{% static 'my_app1/styles.css' %}">
+<style>
+  table, th, td {
+  border: 1px solid black;
+}
+</style>
 
 </head>
 <body>
   <header>
+    <a href="contact">
+      Contact
+    </a>
+    <a href="about">
+      About
+    </a>
+
     <h1>Muhammad Asad Nadeem</h1>
     <p>DevOps Engineer | Portfolio Website</p>
+    {{peoples}}
+
+    <br> <br> <br>
+
+    <table>
+
+  <tr>
+    <th>S.on</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  {% for person in peoples %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{person.name}}</td>
+    <td>{{person.age}}</td>
+    <td> 
+      {% if person.age >= 30%}
+      <h5>Good</h5>
+      {% else %}
+      <h5>Bad</h5>
+      {% endif %}
+
+      
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+  <br> <br> <br>
+
+  <p> 
+    {% if "Carrot" in vegetables %}
+      <h3>Yes, Available!</h3>
+    {% else %}
+      <h3>No, Not Available!</h3>
+    {% endif %}
+  </p>
+
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
