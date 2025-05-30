@@ -76,7 +76,8 @@
     </a>
   <div class="container">
     <h2>Contact Us</h2>
-    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+    <form action="{% url 'Contact' %}" method="POST" >
+      {% csrf_token %}
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -91,6 +92,7 @@
 
       <button type="submit">Send Message</button>
     </form>
+    
     <div class="footer">
       &copy; 2025 Your Company Name. All rights reserved.
     </div>
